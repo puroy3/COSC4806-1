@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Check if user is authenticated.
+// If not, send them to login.php using header()...
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +15,7 @@
 
       <h1>Assignment 1</h1>
 
-      <p><a href="/login.php">Click here to login</a></p>
+      <p> Welcome, <?=$_SESSION['username'] ?></p>
     
   </body>
 </html>
