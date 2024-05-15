@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// If the user is logged in and attempts to go to login.php, it redirects them to index.php.
+if (isset($_SESSION['authenticated'])) {
+  header("Location: index.php");
+}
+?>
+  
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +22,8 @@
       <br>
       <input type="text" id="username" name="username">
       <br>
-      <label for="password">Password:</label><br>
+      <label for="password">Password:</label>
+      <br>
       <input type="password" id="password" name="password">
       <br>
       <br>

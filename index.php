@@ -6,12 +6,6 @@ session_start();
 if (!isset($_SESSION['authenticated'])) {
   header("Location: login.php");
 }
-
-/* If the user is logged in and attempts to go to login.php, it redirects them to index.php.
-if (isset($_SESSION['authenticated'])) {
-  header("Location: index.php");
-}
-*/
   
 ?>
 
