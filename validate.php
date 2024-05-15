@@ -3,7 +3,7 @@
   session_start();
 
   $valid_username = "pushpak";
-  $valid_password = "1234";
+  $valid_password = "1";
 
   $username = $_REQUEST['username'];
   $_SESSION['username'] = $username;

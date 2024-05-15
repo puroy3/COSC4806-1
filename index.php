@@ -15,7 +15,9 @@ session_start();
 
       <h1>Assignment 1</h1>
 
-      <p> Welcome, <?=$_SESSION['username'] ?></p>
+      <p> Welcome, <?=$_SESSION['username'] ?></p> 
+    
+      <?php echo "Today is " . date("l, F j, Y") . "."?>
     
   </body>
 
