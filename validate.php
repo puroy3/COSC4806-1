@@ -23,7 +23,7 @@
     }
 
     // header... redirect to login.php
-    echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];  
+    echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'] . ".";  
     
   }
 
