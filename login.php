@@ -5,10 +5,14 @@ session_start();
 if (isset($_SESSION['authenticated'])) {
   header("Location: index.php");
 }
+
+// Check if 'failed attempts' is initialized, if not, the message won't be displayed.
+if (!isset($_SESSION['failed_attempts'])){
+  $_SESSION['failed_attempts'] = 0;
+}
+  
 if ($_SESSION['failed_attempts'] > 0) {
   echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'] . ".";
-}
-else{
 }
 ?>
   
