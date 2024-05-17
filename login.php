@@ -5,6 +5,11 @@ session_start();
 if (isset($_SESSION['authenticated'])) {
   header("Location: index.php");
 }
+if ($_SESSION['failed_attempts'] > 0) {
+  echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'] . ".";
+}
+else{
+}
 ?>
   
 <!DOCTYPE html>
